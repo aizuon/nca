@@ -96,6 +96,13 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PostBuildEvent>
+      <Command>set dataDirName="sample_data"
+set destDataDir="$(TargetDir)%25dataDirName%25"
+if not exist "%25destDataDir%25" mkdir "%25destDataDir%25"
+set srcDataDir="$(SolutionDir)%25dataDirName%25"
+xcopy "%25srcDataDir%25" "%25destDataDir%25" /E /Y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -115,6 +122,13 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PostBuildEvent>
+      <Command>set dataDirName="sample_data"
+set destDataDir="$(TargetDir)%25dataDirName%25"
+if not exist "%25destDataDir%25" mkdir "%25destDataDir%25"
+set srcDataDir="$(SolutionDir)%25dataDirName%25"
+xcopy "%25srcDataDir%25" "%25destDataDir%25" /E /Y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -130,6 +144,13 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PostBuildEvent>
+      <Command>set dataDirName="sample_data"
+set destDataDir="$(TargetDir)%25dataDirName%25"
+if not exist "%25destDataDir%25" mkdir "%25destDataDir%25"
+set srcDataDir="$(SolutionDir)%25dataDirName%25"
+xcopy "%25srcDataDir%25" "%25destDataDir%25" /E /Y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -149,6 +170,13 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PostBuildEvent>
+      <Command>set dataDirName="sample_data"
+set destDataDir="$(TargetDir)%25dataDirName%25"
+if not exist "%25destDataDir%25" mkdir "%25destDataDir%25"
+set srcDataDir="$(SolutionDir)%25dataDirName%25"
+xcopy "%25srcDataDir%25" "%25destDataDir%25" /E /Y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="sandbox.cpp" />
