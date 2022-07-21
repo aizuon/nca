@@ -9,6 +9,6 @@ public:
 	static std::vector<uint8_t> decompress(const std::vector<uint8_t>& data);
 
 private:
-	static constexpr size_t symbol_size = sizeof(uint64_t);
-	static constexpr size_t window_size = 2 * symbol_size;
+	static constexpr uint64_t symbol_size = sizeof(uint64_t);
+	static constexpr uint64_t window_size = 2 * symbol_size;
 };

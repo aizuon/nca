@@ -1,10 +1,13 @@
 #ifndef PCH_H
 #define PCH_H
 
+#include <cassert>
 #include <cstdint>
 #include <cmath>
 #include <cstring>
 #include <exception>
+#include <mutex>
+#include <string>
 #include <vector>
 #include <span>
 #include <unordered_map>
